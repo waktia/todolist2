@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block header %}
+<h2> 編集画面</h2>
+
+{% endblock header %}
+{% block content %}
+<form action="" method="POST">{% csrf_token %}
+  <div>
+  {{ form.title }}
+  </div>
+
+  <div>
+  {{ form.content }}
+  </div>
+  <div>
+  {{ form.duedate}}
+</div>
+  <input type="submit" value="update">
+</form>
+
+  <div>
+  <a href="{% url 'list' %}">トップ画面へ</a>
+  </div>
+
+{% endblock content %}

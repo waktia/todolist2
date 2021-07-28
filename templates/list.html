@@ -7,11 +7,17 @@
 {% endblock header %}
 
 {% block content %}
+<dev>
 <a href="{% url 'create' %}">新規作成</a>
+</dev>
 
 {% for item in object_list %}
-<p>{{ item.title}} 期日：{{ item.deudate }}</p>
-<p>{{ item.content}}</p>
+<div>
+<a href="{% url 'detail' item.pk %}">{{ item.title}}</a> <p>期日：{{ item.duedate }}</p>
+</div>
+
+<p>{{ item.content }}</p>
+<a href="{% url 'update' item.pk %}">編集</a>
 {% endfor %}
 
 {% endblock content %}
