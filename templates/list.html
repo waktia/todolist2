@@ -7,5 +7,11 @@
 {% endblock header %}
 
 {% block content %}
+<a href="{% url 'create' %}">新規作成</a>
+
+{% for item in object_list %}
+<p>{{ item.title}} 期日：{{ item.deudate }}</p>
+<p>{{ item.content}}</p>
+{% endfor %}
 
 {% endblock content %}

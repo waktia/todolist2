@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+{{ object.title}}
+</div>
+
+<div>
+{{ object.content}}
+</div>
+
+<div>
+  {{ object.duedate }}
+</div>
+
+<div>
+<a href="{% url 'list' %}">トップ画面へ</a>
+</div>
+
+{% endblock content %}

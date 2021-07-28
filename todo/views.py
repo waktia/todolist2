@@ -1,7 +1,8 @@
+
 from todo.models import TodoModel
 from django.shortcuts import render
 from .models import TodoModel
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, DetailView
 from django.urls import reverse_lazy
 
 
@@ -16,3 +17,7 @@ class TodoCreate(CreateView):
   model = TodoModel
   fields = ("title", "content", "duedate")
   success_url = reverse_lazy("list")
+
+class TodoDetail(DetailView):
+  template_name = "detail.html"
+  model= TodoModel
