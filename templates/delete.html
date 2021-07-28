@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block header %}
+<h1>本当に削除しますか？</h1>
+{% endblock header %}
+
+{% block content %}
+<div>
+<form action="" method="POST">{% csrf_token %}
+<input type="submit" value="削除する">
+</div>
+
+<div>
+  <a href="{% url 'list' %}">トップ画面へ</a>
+</div>
+
+</form>
+
+{% endblock %}

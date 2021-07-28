@@ -18,6 +18,7 @@
 
 <p>{{ item.content }}</p>
 <a href="{% url 'update' item.pk %}">編集</a>
+<a href="{% url 'delete' item.pk %}" method="DELETE">削除</a>
 {% endfor %}
 
 {% endblock content %}
