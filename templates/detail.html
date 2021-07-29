@@ -1,21 +1,38 @@
 {% extends "base.html" %}
 
+{% block header %}
+<div class="jumbotron">
+<h3 class="display-3">詳細画面</h3>
+</div>
+{% endblock header %}
 {% block content %}
+
+<div class="container">
+<div>
+ タスクタイトル
+</div>
 
 <div>
 {{ object.title}}
 </div>
 
 <div>
+  タスク内容
+ </div>
+<div>
 {{ object.content}}
 </div>
-
+<div>
+締切日
+ </div>
 <div>
   {{ object.duedate }}
 </div>
 
+
 <div>
-<a href="{% url 'list' %}">トップ画面へ</a>
+<a href="{% url 'list' %}" >トップ画面へ</a>
+</div>
 </div>
 
 {% endblock content %}
